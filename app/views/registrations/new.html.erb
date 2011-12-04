@@ -1,0 +1,47 @@
+
+<% if @user.password_required? %>
+    <div class="facebook-signin">
+        <p><a href="/auth/twitter" class="btn primary large">Sign in with your Twitter account</a></p>
+        <h3>OR</h3>
+    </div>
+<% end %>
+<br/>
+
+
+<%= form_for(resource, :as => resource_name, :url => registration_path(resource_name)) do |f| %>
+
+
+    <%= devise_error_messages! %>
+
+
+    <fieldset class="span9 offset-one-sixth">
+      <legend>Sign up</legend> <br/>
+      <div class="clearfix">
+        <%= f.label :email %>
+        <div class="input">
+            <%= f.email_field :email, :class => 'xlarge', :size => '30' %>
+        </div>
+      </div>
+
+      <% if @user.password_required? %>
+          <div class="clearfix">
+            <%= f.label :password %>
+            <div class="input">
+                <%= f.password_field :password, :class => 'xlarge', :size => '30' %>
+            </div>
+          </div>
+
+          <div class="clearfix">
+            <%= f.label :password_confirmation %>
+            <div class="input">
+                <%= f.password_field :password_confirmation, :class => 'xlarge', :size => '30' %>
+            </div>
+          </div>
+      <% end %>
+      <div class="actions">
+        <%= f.submit "Sign up", :class=> 'btn primary' %>
+      </div>
+    </fieldset>
+<% end %>
+
+

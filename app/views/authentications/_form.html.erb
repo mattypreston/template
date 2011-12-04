@@ -1,0 +1,16 @@
+<%= form_for @authentication do |f| %>
+  <%= f.error_messages %>
+  <p>
+    <%= f.label :user_id %><br />
+    <%= f.number_field :user_id %>
+  </p>
+  <p>
+    <%= f.label :provider %><br />
+    <%= f.text_field :provider %>
+  </p>
+  <p>
+    <%= f.label :uid %><br />
+    <%= f.text_field :uid %>
+  </p>
+  <p><%= f.submit %></p>
+<% end %>

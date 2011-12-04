@@ -1,0 +1,22 @@
+<!--% title "Authentications" %-->
+<h1>Authentications</h1>
+
+<table>
+  <tr>
+    <th>User</th>
+    <th>Provider</th>
+    <th>Uid</th>
+  </tr>
+  <% for authentication in @authentications %>
+    <tr>
+      <td><%= authentication.user_id %></td>
+      <td><%= authentication.provider %></td>
+      <td><%= authentication.uid %></td>
+      <td><%= link_to "Show", authentication %></td>
+      <td><%= link_to "Edit", edit_authentication_path(authentication) %></td>
+      <td><%= link_to "Destroy", authentication, :confirm => 'Are you sure?', :method => :delete %></td>
+    </tr>
+  <% end %>
+</table>
+
+<p><%= link_to "New Authentication", new_authentication_path %></p>

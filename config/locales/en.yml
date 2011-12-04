@@ -1,0 +1,13 @@
+# Sample localization file for English. Add more files in this directory for other locales.
+# See https://github.com/svenfuchs/rails-i18n/tree/master/rails%2Flocale for starting points.
+
+en:
+  hello: "Hello world"
+  company: "Torex 2011"
+  project_name: "Template Project"
+  sign_up: "Sign up"
+  sign_in: "Sign in"
+  home: "Home"
+  about: "About"
+  contact: "Contact"
+
